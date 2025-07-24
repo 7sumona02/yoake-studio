@@ -43,7 +43,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
             <div>
               <button 
                 onClick={onClose}
-                className="text-white bg-neutral-800 px-2 py-1 text-sm border border-neutral-600"
+                className="text-white bg-neutral-800 hover:bg-white hover:text-black transition-colors px-2 py-1 text-sm border border-neutral-600"
               >
                 Close
               </button>
