@@ -140,7 +140,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className='w-full h-84 bg-neutral-800 border-r border-b border-neutral-600 relative'
+        <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative'
         onClick={() => handleProductClick(products[5])}>
           <div className='h-full flex justify-center items-center'>
             <img src='/tshirt6.png' className='w-80' alt='product' />

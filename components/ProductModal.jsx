@@ -64,7 +64,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
             <div className='w-56 border-y border-y-neutral-600 border-l border-l-neutral-600 py-3 px-4'>Size</div>
             <div className='w-12 border border-neutral-600 py-3 px-4 text-center'>S</div>
             <div className='flex-1 border-y border-y-neutral-600 border-r border-r-neutral-600 py-3 px-4 text-center bg-white text-black hover:bg-neutral-800 hover:text-white transition-colors'>
-              [${product.price}] Buy now
+              [${product.price}.00] Buy now
             </div>
           </div>
 
