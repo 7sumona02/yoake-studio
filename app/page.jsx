@@ -76,7 +76,7 @@ const Page = () => {
   return (
     <div className='min-h-screen w-screen bg-neutral-900 cursor-crosshair'>
       <div className='grid md:grid-cols-4 grid-cols-1'>
-        <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'>
+        <div className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'>
           <div className='h-full flex justify-center items-center'>
             <p className={`text-white ${jb.className} group-hover:hidden`}>YOAKE STUDIO</p>
             <p className={`text-black ${jb.className} hidden group-hover:block`}>yoake&studio@gmail.com</p>
@@ -85,7 +85,7 @@ const Page = () => {
         
         {/* Product 1 */}
         <div 
-          className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
+          className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
           onClick={() => handleProductClick(products[0])}
         >
           <div className='h-full flex justify-center items-center'>
@@ -95,7 +95,7 @@ const Page = () => {
 
         {/* Product 2 */}
         <div 
-          className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
+          className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
           onClick={() => handleProductClick(products[1])}
         >
           <div className='h-full flex justify-center items-center'>
@@ -103,7 +103,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className='w-full h-84 bg-neutral-800 border-r border-b border-neutral-600 relative'>
+        <div className='w-full h-90 bg-neutral-800 border-r border-b border-neutral-600 relative'>
           <div className='h-full flex justify-center items-center'>
             <input 
               type="text" 
@@ -115,7 +115,7 @@ const Page = () => {
       </div>
 
       <div className='grid md:grid-cols-4 grid-cols-1'>
-        <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'
+        <div className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'
         onClick={() => handleProductClick(products[2])}>
           <div className='h-full flex justify-center items-center'>
             <img src='/tshirt3.png' className='w-60' alt='product' />
@@ -123,7 +123,7 @@ const Page = () => {
         </div>
         
         <div 
-          className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
+          className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
           onClick={() => handleProductClick(products[3])}
         >
           <div className='h-full flex justify-center items-center'>
@@ -132,7 +132,7 @@ const Page = () => {
         </div>
 
         <div 
-          className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
+          className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative cursor-pointer'
           onClick={() => handleProductClick(products[4])}
         >
           <div className='h-full flex justify-center items-center'>
@@ -140,7 +140,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative'
+        <div className='w-full h-90 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative'
         onClick={() => handleProductClick(products[5])}>
           <div className='h-full flex justify-center items-center'>
             <img src='/tshirt6.png' className='w-60' alt='product' />
