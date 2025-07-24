@@ -1,5 +1,6 @@
 'use client'
 import { JetBrains_Mono } from 'next/font/google'
+import { useEffect } from 'react';
 
 const jb = JetBrains_Mono({
   weight: '400',
@@ -7,11 +8,34 @@ const jb = JetBrains_Mono({
 })
 
 const ProductModal = ({ isOpen, onClose, product }) => {
+  // Close modal when pressing Escape key
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-white/5 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-black p-10 border border-neutral-600 relative w-2xl h-[30rem] overflow-y-auto">         
+    <div 
+      className="fixed inset-0 bg-white/5 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50"
+      onClick={onClose} // Close when clicking on backdrop
+    >
+      <div 
+        className="bg-black p-10 border border-neutral-600 relative w-2xl h-[30rem] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()} // Prevent click from bubbling to backdrop
+      >         
         {/* Modal Content */}
         <div className="w-full flex flex-col gap-5">
           <div className='flex items-center justify-between'>
@@ -45,11 +69,12 @@ const ProductModal = ({ isOpen, onClose, product }) => {
           </div>
 
           <div className='mt-4 flex-1'>
-            <img src={product.images[0]} className='w-full bg-neutral-800 border border-neutral-600 p-10' alt={product.title} />
+            <img src={product.images[0]} className='w-full bg-neutral-800 border border-neutral-600 p-6' alt={product.title} />
             <div className='flex-1 flex'>
-              <img src={product.images[1] || product.images[0]} className='w-1/2 bg-neutral-800 border-x border-x-neutral-600 border-b border-b-neutral-600 p-10' alt={product.title} />
-              <img src={product.images[2] || product.images[0]} className='w-1/2 bg-neutral-800 border-r border-r-neutral-600 border-b border-b-neutral-600 p-10' alt={product.title} />
+              <img src={product.images[1] || product.images[0]} className='w-1/2 bg-neutral-800 border-x border-x-neutral-600 border-b border-b-neutral-600 p-4' alt={product.title} />
+              <img src={product.images[2] || product.images[0]} className='w-1/2 bg-neutral-800 border-r border-r-neutral-600 border-b border-b-neutral-600 p-4' alt={product.title} />
             </div>
+            <img src={product.images[3]} className='w-full bg-neutral-800 border-x border-x-neutral-600 border-b border-b-neutral-600 p-6' alt={product.title} />
           </div>
         </div>
       </div>
