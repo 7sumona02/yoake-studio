@@ -14,7 +14,7 @@ const products = [
     title: '0xFFF',
     description: 'Not your basic tee, minimal & classy. Made with premium organic cotton for ultimate comfort.',
     features: ['100% organic cotton', 'Minimalist design', 'Limited edition'],
-    price: 500,
+    price: 10,
     images: ['/tshirt1.png', '/tshirt1.png', '/tshirt1.png', '/tshirt1.png']
   },
   {
@@ -22,7 +22,7 @@ const products = [
     title: '0x000',
     description: 'The essential black tee with perfect fit. Designed for everyday wear with premium durability.',
     features: ['Reinforced stitching', 'Pre-shrunk fabric', 'Unisex fit'],
-    price: 450,
+    price: 10,
     images: ['/tshirt2.png', '/tshirt2.png', '/tshirt2.png', '/tshirt2.png']
   },
   {
@@ -30,7 +30,7 @@ const products = [
     title: '0x7E7',
     description: 'Vintage washed tee with distressed details. Each piece has unique wear patterns.',
     features: ['Vintage wash', 'Distressed details', 'Oversized fit'],
-    price: 550,
+    price: 10,
     images: ['/tshirt3.png', '/tshirt3.png', '/tshirt3.png', '/tshirt3.png']
   },
   {
@@ -38,7 +38,7 @@ const products = [
     title: '0x4D4',
     description: 'Performance tee with moisture-wicking technology. Ideal for active lifestyles.',
     features: ['Moisture-wicking', 'UV protection', 'Quick dry'],
-    price: 600,
+    price: 10,
     images: ['/tshirt4.png', '/tshirt4.png', '/tshirt4.png', '/tshirt4.png']
   },
   {
@@ -46,7 +46,7 @@ const products = [
     title: '0x2A2',
     description: 'Oversized boxy fit tee with dropped shoulders. Modern streetwear aesthetic.',
     features: ['Boxy fit', 'Dropped shoulders', 'Heavyweight fabric'],
-    price: 480,
+    price: 10,
     images: ['/tshirt5.png', '/tshirt5.png', '/tshirt5.png', '/tshirt5.png']
   },
   {
@@ -54,7 +54,7 @@ const products = [
     title: '0x9C9',
     description: 'Cropped tee with raw edges. Edgy contemporary design with feminine touch.',
     features: ['Cropped length', 'Raw edge finish', 'Slim fit'],
-    price: 520,
+    price: 10,
     images: ['/tshirt6.png', '/tshirt6.png', '/tshirt6.png', '/tshirt6.png']
   }
 ];
@@ -75,7 +75,7 @@ const Page = () => {
 
   return (
     <div className='min-h-screen w-screen bg-neutral-900 cursor-crosshair'>
-      <div className='grid grid-cols-4'>
+      <div className='grid md:grid-cols-4 grid-cols-1'>
         <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'>
           <div className='h-full flex justify-center items-center'>
             <p className={`text-white ${jb.className} group-hover:hidden`}>YOAKE STUDIO</p>
@@ -114,7 +114,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className='grid grid-cols-4'>
+      <div className='grid md:grid-cols-4 grid-cols-1'>
         <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative group'
         onClick={() => handleProductClick(products[2])}>
           <div className='h-full flex justify-center items-center'>
@@ -143,7 +143,7 @@ const Page = () => {
         <div className='w-full h-84 bg-neutral-800 hover:bg-white transition-colors border-r border-b border-neutral-600 relative'
         onClick={() => handleProductClick(products[5])}>
           <div className='h-full flex justify-center items-center'>
-            <img src='/tshirt6.png' className='w-80' alt='product' />
+            <img src='/tshirt6.png' className='w-60' alt='product' />
           </div>
         </div>
       </div>
